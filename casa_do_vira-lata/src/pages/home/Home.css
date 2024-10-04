@@ -1,0 +1,192 @@
+/* Global Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #F6F7F8;
+}
+
+/* Main */
+#main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Navbar */
+.casa-vl-home {
+    width: 100%;
+    background-color: #00C6D8;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.nav-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links,
+.nav-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+    color: white;
+}
+
+.nav-links a,
+.nav-social a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-social a:hover {
+    color: #F0F0F0;
+}
+
+/* Hero Section */
+#hero {
+    background: url('../../../public/images/bg.svg') center/cover no-repeat;
+    padding: 5rem 5rem;
+    color: white;
+}
+
+.casa-vl-hero-info {
+    margin-top: 5rem;
+    h3 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+}
+
+.hero-img {
+    background-image: url(../../../public/images/hero.png);
+    background-size: cover;
+    height: 500px;
+    width: 500px;
+}
+
+/* Info Card */
+.casa-vl-info-card {
+    background-color: #FF6614;
+    padding: 1.5rem;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 200px;
+    width: 85%;
+}
+
+.casa-vl-help-us a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+/* About Section */
+#about {
+    padding: 5rem 5rem;
+    text-align: center;
+}
+
+.casa-vl-about-us h2 {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.casa-vl-about-us p {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    color: black;
+}
+
+/* Adopt Section */
+#adopt {
+    padding: 5rem 5rem;
+}
+
+.adopt-title {
+    margin: 6.25rem;
+    h1 {
+        font-size: 2.5rem;
+        color: black;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+}
+
+.adopt-img {
+    background-image: url(../../../public/images/adote.png);
+    background-size: cover;
+    height: 400px;
+    width: 400px;
+}
+
+.adopt-forms {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+
+    h2 {
+        text-align: center;
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: black;
+    }
+}
+
+/* Footer */
+.casa-vl-footer {
+    background-color: #00C6D8;
+    color: white;
+    padding: 2rem;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-social a,
+.footer-logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.footer-rights {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #hero {
+        padding: 2rem 0;
+    }
+
+    .hero-img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .adopt-forms {
+        padding: 1rem;
+    }
+}
