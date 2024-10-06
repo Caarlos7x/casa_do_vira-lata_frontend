@@ -1,9 +1,9 @@
 "use client";
 
-import { IonRow, IonCol, IonFooter } from '@ionic/react';
-import { useState, useEffect } from 'react';
-import 'primeicons/primeicons.css';
-import './Home.css';
+import { IonRow, IonCol, IonFooter } from "@ionic/react";
+import { useState, useEffect } from "react";
+import "primeicons/primeicons.css";
+import "./Home.css";
 
 const HomeComponent = () => {
     const [isMounted, setIsMounted] = useState(false);
@@ -20,7 +20,7 @@ const HomeComponent = () => {
         <div>
             <main id="main">
                 {/* Navbar */}
-                <section id='navbar' className="casa-vl-home">
+                <section id="navbar" className="casa-vl-home">
                     <IonRow>
                         <IonCol size="3">
                             <div className="nav-title">Casa do Vira-Lata</div>
@@ -33,7 +33,7 @@ const HomeComponent = () => {
                             <a href="#contact">Contato</a>
                         </IonCol>
 
-                        <IonCol size="3" className='nav-social'>
+                        <IonCol size="3" className="nav-social">
                             <a href="https://www.instagram.com/casadoviralata/">
                                 <i className="pi pi-instagram"></i>
                             </a>
@@ -45,77 +45,119 @@ const HomeComponent = () => {
                 </section>
 
                 {/* Hero Section */}
-                <section id='hero'>
+                <section id="hero">
                     <IonRow>
-                        <IonCol size='6' className='casa-vl-hero-info'>
+                        <IonCol size="6" className="casa-vl-hero-info">
                             <h3>Casa do Vira-Lata</h3>
                             <p>
-                                Não existe animais de rua, existem animais
-                                nas ruas e eles precisam de nós!
+                                Não existe animais de rua, existem animais nas ruas e eles
+                                precisam de nós!
                             </p>
                         </IonCol>
 
-                        <IonCol size='6' className='casa-vl-hero-img'>
+                        <IonCol size="6" className="casa-vl-hero-img">
                             <div className="hero-img"></div>
                         </IonCol>
                     </IonRow>
 
                     <IonRow>
-                        <IonCol size='12' className='casa-vl-hero-info-panel'>
-                            <div className="casa-vl-info-card">
-                                <div className="casa-vl-help-us">
-                                    <a href="">
-                                        <i className="pi pi-heart"></i>
-                                        <span>Assinatura Mercado Pago</span>
-                                    </a>
-                                    <a href="">
-                                        <i className="pi pi-heart"></i>
-                                        <span>Assinatura Apoia-se</span>
-                                    </a>
-                                    <a href="">
-                                        <i className="pi pi-heart"></i>
-                                        <span>Assinatura PICPAY R$ 12,00 por ano</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </IonCol>
+                        <IonRow className="casa-vl-hero-info-panel">
+                            <IonCol size="4" className="display-patreon">
+                                <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380848dc7c6e8018de5c56be114ce" target="_blank">
+                                    <i className="pi pi-heart"></i>
+                                    <span>Assinatura Mercado Pago</span>
+                                </a>
+                            </IonCol>
+
+                            <IonCol size="4" className="display-patreon">
+                                <a href="https://apoia.se/casadoviralata" target="_blank">
+                                    <i className="pi pi-heart"></i>
+                                    <span>Assinatura Apoia-se</span>
+                                </a>
+                            </IonCol>
+
+                            <IonCol size="4" className="display-patreon">
+                                <a href="https://app.picpay.com/user/assinaturacasadoviralata" target="_blank">
+                                    <i className="pi pi-heart"></i>
+                                    <span>Assinatura PICPAY R$ 12,00 por ano</span>
+                                </a>
+                            </IonCol>
+
+                        </IonRow>
                     </IonRow>
                 </section>
 
                 {/* About Section */}
-                <section id='about'>
+                <section id="about">
+                    <IonRow className="about-title">
+                        <h1>Quem Somos</h1>
+                    </IonRow>
                     <IonRow>
-                        <IonCol size='12' className='casa-vl-about-us'>
-                            <h2>Quem Somos</h2>
+                        <IonCol size="6" className="casa-vl-about-us">
+                            <h2>Casa Vira-Lata</h2>
                             <p>
-                                Somos uma organização dedicada a encontrar lares amorosos para cães e gatos abandonados.
+                                Somos uma organização dedicada a encontrar lares amorosos
+                                para cães e gatos abandonados. Com a paixão pela proteção animal
+                                em nosso coração, trabalhamos incansavelmente para resgatar
+                                esses animais vulneráveis, oferecendo a eles não apenas um
+                                abrigo, mas também amor e cuidado.
+                                Nossa missão vai além de simplesmente salvar vidas; buscamos
+                                garantir que cada cão e gato tenha a oportunidade de viver em
+                                um ambiente seguro e acolhedor. Acreditamos que cada animal
+                                merece uma segunda chance e estamos comprometidos em fazer a
+                                diferença, uma adoção de cada vez.
+                                Realizamos um trabalho de resgate, adoção responsável e
+                                conscientização sobre a importância da adoção de animais
+                                abandonados. Nossos esforços são sustentados por uma rede
+                                de voluntários dedicados, veterinários parceiros e uma
+                                comunidade que compartilha nossa visão de um mundo onde
+                                todos os animais são valorizados e amados.
+                                Ao adotar um animal, você não só transforma a vida dele,
+                                mas também ganha um amigo leal e carinhoso. Junte-se a nós
+                                nessa jornada de amor e compaixão, e ajude a criar um futuro
+                                melhor para cães e gatos que, assim como nós, merecem um lar.
+                                Seja parte da mudança. Adote, doe, e espalhe a palavra!
                             </p>
+                        </IonCol>
+
+                        <IonCol size="6" className="casa-vl-about-img">
+                            <div className="about-images">
+                                <div className="about-img about-img1"></div>
+                                <div className="about-img about-img2"></div>
+                                <div className="about-img about-img3"></div>
+                                <div className="about-img about-img4"></div>
+                                <div className="about-img about-img5"></div>
+                                <div className="about-img about-img6"></div>
+                            </div>
+
                         </IonCol>
                     </IonRow>
                 </section>
 
                 {/* Adopt Section */}
-                <section id='adopt'>
-                    <IonRow className='adopt-title'>
+                <section id="adopt">
+                    <IonRow className="adopt-title">
                         <h1>Vamos adotar um amiguinho?</h1>
                     </IonRow>
                     <IonRow>
-                        <IonCol size='6'>
+                        <IonCol size="6">
                             <div className="adopt-img"></div>
                         </IonCol>
 
-                        <IonCol size='6'>
+                        <IonCol size="6">
                             <div className="adopt-forms">
                                 <h2>Formulário de adoção</h2>
                                 <iframe
-                                    className='adopt-form-content'
+                                    className="adopt-form-content"
                                     src="https://docs.google.com/forms/d/e/1FAIpQLSeOTb99-qlbSya0KVOG2Yk091s2925yVYg5_KSwtFoTLn1WHw/viewform?embedded=true"
                                     width="100%"
                                     height="640"
                                     frameBorder="0"
                                     marginHeight={0}
                                     marginWidth={0}
-                                    title="Formulário de Adoção">Carregando…
+                                    title="Formulário de Adoção"
+                                >
+                                    Carregando…
                                 </iframe>
                             </div>
                         </IonCol>
@@ -123,9 +165,15 @@ const HomeComponent = () => {
                 </section>
 
                 {/* Footer */}
-                <IonFooter className='casa-vl-footer'>
-                    <IonRow className='footer-top'>
-                        <IonCol size='6' className='footer-social'>
+                <IonFooter className="casa-vl-footer">
+                    <IonRow className="footer-top">
+                        <IonCol size="6" className="footer-logo">
+                            <a href="#home">
+                                <div className="footer-img"></div>
+                            </a>
+                        </IonCol>
+
+                        <IonCol size="6" className="footer-social">
                             <a href="https://www.instagram.com/casadoviralata/">
                                 <i className="pi pi-instagram"></i>
                             </a>
@@ -134,15 +182,10 @@ const HomeComponent = () => {
                             </a>
                         </IonCol>
 
-                        <IonCol size='6' className='footer-logo'>
-                            <a href="#home">
-                                <div className="footer-img"></div>
-                            </a>
-                        </IonCol>
                     </IonRow>
                     <IonRow>
-                        <IonCol size='12' className='footer-rights'>
-                            Todos os direitos reservados | desenvolvido por devside.
+                        <IonCol size="12" className="footer-rights">
+                            <span>Casa do Vira-Lata</span> - Todos os direitos reservados | desenvolvido por <span><a href="https://www.devside.com.br" target="_blank">devside</a></span>.
                         </IonCol>
                     </IonRow>
                 </IonFooter>
@@ -150,6 +193,5 @@ const HomeComponent = () => {
         </div>
     );
 };
-
 
 export default HomeComponent;

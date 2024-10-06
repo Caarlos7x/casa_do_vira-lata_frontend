@@ -1,192 +1,352 @@
 /* Global Styles */
-body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #F6F7F8;
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f6f7f8;
 }
 
 /* Main */
 #main {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 /* Navbar */
 .casa-vl-home {
-    width: 100%;
-    background-color: #00C6D8;
-    padding: 1rem 2rem;
-    text-align: center;
+  width: 100%;
+  background-color: #00c6d8;
+  padding: 1rem 2rem;
+  text-align: center;
 }
 
 .nav-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
 }
 
 .nav-links,
 .nav-social {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    align-items: center;
-    color: white;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+  color: white;
 }
 
 .nav-links a,
 .nav-social a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
 }
 
 .nav-links a:hover,
 .nav-social a:hover {
-    color: #F0F0F0;
+  color: #f0f0f0;
 }
 
 /* Hero Section */
 #hero {
-    background: url('../../../public/images/bg.svg') center/cover no-repeat;
-    padding: 5rem 5rem;
-    color: white;
+  background: url("../../../public/images/bg.svg") center/cover no-repeat;
+  padding: 5rem 5rem;
+  color: white;
 }
 
 .casa-vl-hero-info {
-    margin-top: 5rem;
-    h3 {
-        font-size: 3rem;
-        font-weight: bold;
-    }
+  margin-top: 5rem;
+  h3 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
 
-    p {
-        font-size: 2rem;
-    }
+  p {
+    font-size: 2rem;
+  }
 }
 
 .hero-img {
-    background-image: url(../../../public/images/hero.png);
-    background-size: cover;
-    height: 500px;
-    width: 500px;
+  background-image: url(../../../public/images/hero.png);
+  background-size: cover;
+  height: 500px;
+  width: 500px;
 }
 
 /* Info Card */
-.casa-vl-info-card {
-    background-color: #FF6614;
-    padding: 1.5rem;
-    border-radius: 15px;
+.casa-vl-hero-info-panel {
+  background-color: #ff6614;
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 200px;
+  width: 85%;
+
+  .display-patreon {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    height: 200px;
-    width: 85%;
+    gap: 1rem;
+  }
 }
 
 .casa-vl-help-us a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: white;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
 }
 
 /* About Section */
 #about {
-    padding: 5rem 5rem;
-    text-align: center;
+  padding: 5rem 5rem;
+  text-align: center;
 }
 
-.casa-vl-about-us h2 {
+.about-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 100px;
+
+    h1 {
+        font-size: 3.5rem;
+        color: black;
+        font-weight: 700;
+        
+    }
+}
+
+.casa-vl-about-us {
+  h2 {
     font-size: 2.5rem;
     color: black;
+  }
+
+  p {
+    text-align: justify;
+  }
 }
 
 .casa-vl-about-us p {
-    font-size: 1.25rem;
-    margin-top: 1rem;
-    color: black;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  color: black;
+}
+
+.about-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 20px;
+}
+
+.about-images .about-img1,
+.about-images .about-img2,
+.about-images .about-img3,
+.about-images .about-img4,
+.about-images .about-img5,
+.about-images .about-img6 {
+    flex: 1 1 calc(33.333% - 2rem);
+    max-width: calc(33.333% - 2rem);
+}
+
+.about-images .about-img {
+    background-size: cover;
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+}
+
+.about-images .about-img:nth-child(1) {
+    background-image: url(../../../public/images/cat-01.png);
+    background-size: cover;
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+    opacity: 0.6;
+    transition: opacity 0.6s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.about-images .about-img:nth-child(2) {
+    background-image: url(../../../public/images/dog-01.png);
+    background-size: cover;
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+    opacity: 0.6;
+    transition: opacity 0.6s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.about-images .about-img:nth-child(3) {
+    background-image: url(../../../public/images/cat-02.png);
+    background-size: cover;
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+    opacity: 0.6;
+    transition: opacity 0.6s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.about-images .about-img:nth-child(4) {
+    background-image: url(../../../public/images/dog-02.png);
+    background-size: cover;
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+    opacity: 0.6;
+    transition: opacity 0.6s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.about-images .about-img:nth-child(5) {
+    background-image: url(../../../public/images/cat-03.png);
+    background-size: cover;
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+    opacity: 0.6;
+    transition: opacity 0.6s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.about-images .about-img:nth-child(6) {
+    background-image: url(../../../public/images/dog-03.png);
+    background-size: cover;
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+    opacity: 0.6;
+    transition: opacity 0.6s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 /* Adopt Section */
 #adopt {
-    padding: 5rem 5rem;
+  padding: 5rem 5rem;
 }
 
 .adopt-title {
-    margin: 6.25rem;
-    h1 {
-        font-size: 2.5rem;
-        color: black;
-        text-align: center;
-        margin: 0 auto;
-    }
-    
+  margin: 6.25rem;
+  h1 {
+    font-size: 2.5rem;
+    color: black;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 .adopt-img {
-    background-image: url(../../../public/images/adote.png);
-    background-size: cover;
-    height: 400px;
-    width: 400px;
+  background-image: url(../../../public/images/adote.png);
+  background-size: cover;
+  height: 400px;
+  width: 400px;
 }
 
 .adopt-forms {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 
-    h2 {
-        text-align: center;
-        font-size: 3.2rem;
-        font-weight: 700;
-        color: black;
-    }
+  h2 {
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: black;
+  }
 }
 
 /* Footer */
 .casa-vl-footer {
-    background-color: #00C6D8;
-    color: white;
-    padding: 2rem;
+  background-color: #00c6d8;
+  color: white;
+  padding: 2rem;
 }
 
 .footer-top {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-img {
+  background-image: url(../../../public/images/logo-insta-casa-vl.jpg);
+  background-size: cover;
+  height: 80px;
+  width: 80px;
+  border-radius: 15px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .footer-social a,
 .footer-logo a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .footer-rights {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 1rem;
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 1rem;
+
+  span {
+    font-weight: 700;
+  }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    #hero {
-        padding: 2rem 0;
-    }
+  #hero {
+    padding: 2rem 0;
+  }
 
-    .hero-img {
-        height: 200px;
-        width: 200px;
-    }
+  .hero-img {
+    height: 200px;
+    width: 200px;
+  }
 
-    .adopt-forms {
-        padding: 1rem;
-    }
+  .adopt-forms {
+    padding: 1rem;
+  }
 }
