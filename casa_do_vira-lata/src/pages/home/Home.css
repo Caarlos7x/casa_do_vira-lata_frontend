@@ -1,10 +1,10 @@
-/* Global Styles */
+
 body,
 html {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Arial", sans-serif;
+  font-family: "Monserrat", sans-serif;
   background-color: #f6f7f8;
 }
 
@@ -38,16 +38,16 @@ html {
   color: white;
 }
 
-.nav-links a,
+/* .nav-links a,
 .nav-social a {
   text-decoration: none;
   color: white;
   font-weight: 500;
-}
+} */
 
 .nav-links a:hover,
 .nav-social a:hover {
-  color: #f0f0f0;
+  color: #333;
 }
 
 /* Hero Section */
@@ -55,6 +55,10 @@ html {
   background: url("../../../public/images/bg.svg") center/cover no-repeat;
   padding: 5rem 5rem;
   color: white;
+}
+
+.casa-vl-hero-row {
+  margin-left: 9.25rem;
 }
 
 .casa-vl-hero-info {
@@ -68,6 +72,7 @@ html {
 
 .casa-vl-hero-info p {
   font-size: 2rem;
+  width: 31.25rem;
 }
 
 .hero-img {
@@ -76,6 +81,11 @@ html {
   height: 500px;
   width: 500px;
 }
+
+.casa-vl-hero-img {
+  padding-right: 100px;
+}
+
 
 /* Info Card */
 .casa-vl-hero-info-panel {
@@ -339,7 +349,7 @@ html {
     text-align: center;
 
     h3 {
-      font-size: 2.8rem !important;
+      font-size: 2.7rem !important;
     }
 
     p {
@@ -369,6 +379,7 @@ html {
   
   .display-patreon a {
     margin: 20px 0 20px 0;
+    text-align: center;
 
     &:hover {
       color: #333;

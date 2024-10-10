@@ -32,7 +32,7 @@ const HomeComponent = () => {
                 {/* Hero Section */}
                 <section id="home">
                     <IonRow className="casa-vl-hero-row">
-                        <IonCol size="6" className="casa-vl-hero-info">
+                        <IonCol size="12" sizeMd="6" className="casa-vl-hero-info">
                             <h3>Casa do Vira-Lata</h3>
                             <p>
                                 Não existe animais de rua, existem animais nas ruas e eles
@@ -40,7 +40,7 @@ const HomeComponent = () => {
                             </p>
                         </IonCol>
 
-                        <IonCol size="6" className="casa-vl-hero-img">
+                        <IonCol size="12" sizeMd="6" className="casa-vl-hero-img">
                             <div className="hero-img"></div>
                         </IonCol>
                     </IonRow>
@@ -49,22 +49,19 @@ const HomeComponent = () => {
                         <IonRow className="casa-vl-hero-info-panel">
                             <IonCol size="4" className="display-patreon">
                                 <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380848dc7c6e8018de5c56be114ce" target="_blank" rel="noopener">
-                                    <i className="pi pi-heart"></i>
-                                    <span>Assinatura Mercado Pago</span>
+                                    <span>Assinatura <strong>Mercado Pago</strong></span>
                                 </a>
                             </IonCol>
 
                             <IonCol size="4" className="display-patreon">
                                 <a href="https://apoia.se/casadoviralata" target="_blank" rel="noopener">
-                                    <i className="pi pi-heart"></i>
-                                    <span>Assinatura Apoia-se</span>
+                                    <span>Assinatura <strong>Apoia-se</strong></span>
                                 </a>
                             </IonCol>
 
                             <IonCol size="4" className="display-patreon">
                                 <a href="https://app.picpay.com/user/assinaturacasadoviralata" target="_blank" rel="noopener">
-                                    <i className="pi pi-heart"></i>
-                                    <span>Assinatura PICPAY R$ 12,00 por ano</span>
+                                    <span>Assinatura <strong>PICPAY</strong> R$ 12,00 por ano</span>
                                 </a>
                             </IonCol>
 

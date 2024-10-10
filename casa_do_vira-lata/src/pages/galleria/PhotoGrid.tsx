@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PhotoService } from '../../services/PhotoService'; // Ajuste o caminho conforme necessário
+import { PhotoService } from '../../services/PhotoService';
 import Image from 'next/image';
 
 const PhotoGrid = () => {
@@ -8,8 +8,8 @@ const PhotoGrid = () => {
   useEffect(() => {
     PhotoService.getImages()
       .then(data => {
-        console.log('Images loaded:', data); // Log para depuração
-        setImages(data.slice(0, 9)); // Limitar a 9 imagens para o grid 3x3
+        console.log('Images loaded:', data);
+        setImages(data.slice(0, 9));
       })
       .catch(error => console.error('Error loading images:', error));
   }, []);
