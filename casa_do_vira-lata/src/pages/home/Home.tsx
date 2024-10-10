@@ -78,10 +78,9 @@ const HomeComponent = () => {
                         <h1>Quem Somos</h1>
                     </IonRow>
                     <IonRow>
-                        <IonCol size="12" sizeMd="6" className="casa-vl-about-us">
-                            <h2>Casa Vira-Lata</h2>
+                        <IonCol size="12" sizeMd="12" className="casa-vl-about-us">
                             <p>
-                                Somos uma organização dedicada a encontrar lares amorosos
+                                A <strong>Casa do Vira-Lata</strong> é uma organização dedicada a encontrar lares amorosos
                                 para cães e gatos abandonados. Com a paixão pela proteção animal
                                 em nosso coração, trabalhamos incansavelmente para resgatar
                                 esses animais vulneráveis, oferecendo a eles não apenas um
@@ -105,10 +104,8 @@ const HomeComponent = () => {
                             </p>
                         </IonCol>
 
-                        <IonCol size="6" className="casa-vl-about-img">
-                            {/* <Galleria /> */}
-
-                        </IonCol>
+                        {/* <IonCol size="6" className="casa-vl-about-img">
+                        </IonCol> */}
                     </IonRow>
                 </section>
 

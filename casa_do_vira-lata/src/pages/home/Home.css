@@ -259,6 +259,12 @@ html {
   text-align: center;
   margin-top: 2.5rem;
   font-size: 1rem;
+
+  span:nth-child(2) {
+    &:hover {
+      color: #333;
+    }
+  }
 }
 
 .footer-rights span {
@@ -412,6 +418,33 @@ html {
 
   .adopt-forms h2 {
     font-size: 2rem;
+  }
+
+  .photogrid {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .photogrid::before,
+  .photogrid::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    z-index: 1;
+  }
+
+  .photogrid::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), 
+    rgba(255, 255, 255, 0));
+  }
+
+  .photogrid::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), 
+    rgba(255, 255, 255, 0));
   }
 
   .footer-social {
