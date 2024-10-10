@@ -1,9 +1,12 @@
 "use client";
 
 import { IonRow, IonCol, IonFooter } from "@ionic/react";
+import Navbar from '../../components/toolbar/Toolbar'
 import { useState, useEffect } from "react";
 import "primeicons/primeicons.css";
 import "./Home.css";
+import PhotoGrid from "../galleria/PhotoGrid";
+// import Galleria from "../../components/galleria/Galleria";
 
 const HomeComponent = () => {
     const [isMounted, setIsMounted] = useState(false);
@@ -21,32 +24,14 @@ const HomeComponent = () => {
             <main id="main">
                 {/* Navbar */}
                 <section id="navbar" className="casa-vl-home">
-                    <IonRow>
-                        <IonCol size="3">
-                            <div className="nav-title">Casa do Vira-Lata</div>
-                        </IonCol>
+                    <Navbar>
 
-                        <IonCol size="6" className="nav-links">
-                            <a href="#home">Home</a>
-                            <a href="#about">Quem Somos</a>
-                            <a href="#adopt">Adote</a>
-                            <a href="#contact">Contato</a>
-                        </IonCol>
-
-                        <IonCol size="3" className="nav-social">
-                            <a href="https://www.instagram.com/casadoviralata/">
-                                <i className="pi pi-instagram"></i>
-                            </a>
-                            <a href="https://www.tiktok.com/@casadoviralata">
-                                <i className="pi pi-tiktok"></i>
-                            </a>
-                        </IonCol>
-                    </IonRow>
+                    </Navbar>
                 </section>
 
                 {/* Hero Section */}
-                <section id="hero">
-                    <IonRow>
+                <section id="home">
+                    <IonRow className="casa-vl-hero-row">
                         <IonCol size="6" className="casa-vl-hero-info">
                             <h3>Casa do Vira-Lata</h3>
                             <p>
@@ -63,21 +48,21 @@ const HomeComponent = () => {
                     <IonRow>
                         <IonRow className="casa-vl-hero-info-panel">
                             <IonCol size="4" className="display-patreon">
-                                <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380848dc7c6e8018de5c56be114ce" target="_blank">
+                                <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380848dc7c6e8018de5c56be114ce" target="_blank" rel="noopener">
                                     <i className="pi pi-heart"></i>
                                     <span>Assinatura Mercado Pago</span>
                                 </a>
                             </IonCol>
 
                             <IonCol size="4" className="display-patreon">
-                                <a href="https://apoia.se/casadoviralata" target="_blank">
+                                <a href="https://apoia.se/casadoviralata" target="_blank" rel="noopener">
                                     <i className="pi pi-heart"></i>
                                     <span>Assinatura Apoia-se</span>
                                 </a>
                             </IonCol>
 
                             <IonCol size="4" className="display-patreon">
-                                <a href="https://app.picpay.com/user/assinaturacasadoviralata" target="_blank">
+                                <a href="https://app.picpay.com/user/assinaturacasadoviralata" target="_blank" rel="noopener">
                                     <i className="pi pi-heart"></i>
                                     <span>Assinatura PICPAY R$ 12,00 por ano</span>
                                 </a>
@@ -93,25 +78,25 @@ const HomeComponent = () => {
                         <h1>Quem Somos</h1>
                     </IonRow>
                     <IonRow>
-                        <IonCol size="6" className="casa-vl-about-us">
+                        <IonCol size="12" sizeMd="6" className="casa-vl-about-us">
                             <h2>Casa Vira-Lata</h2>
                             <p>
                                 Somos uma organização dedicada a encontrar lares amorosos
                                 para cães e gatos abandonados. Com a paixão pela proteção animal
                                 em nosso coração, trabalhamos incansavelmente para resgatar
                                 esses animais vulneráveis, oferecendo a eles não apenas um
-                                abrigo, mas também amor e cuidado.
+                                abrigo, mas também amor e cuidado. <br /><br />
                                 Nossa missão vai além de simplesmente salvar vidas; buscamos
                                 garantir que cada cão e gato tenha a oportunidade de viver em
                                 um ambiente seguro e acolhedor. Acreditamos que cada animal
                                 merece uma segunda chance e estamos comprometidos em fazer a
-                                diferença, uma adoção de cada vez.
+                                diferença, uma adoção de cada vez. <br /><br />
                                 Realizamos um trabalho de resgate, adoção responsável e
                                 conscientização sobre a importância da adoção de animais
                                 abandonados. Nossos esforços são sustentados por uma rede
                                 de voluntários dedicados, veterinários parceiros e uma
                                 comunidade que compartilha nossa visão de um mundo onde
-                                todos os animais são valorizados e amados.
+                                todos os animais são valorizados e amados. <br /><br />
                                 Ao adotar um animal, você não só transforma a vida dele,
                                 mas também ganha um amigo leal e carinhoso. Junte-se a nós
                                 nessa jornada de amor e compaixão, e ajude a criar um futuro
@@ -121,14 +106,7 @@ const HomeComponent = () => {
                         </IonCol>
 
                         <IonCol size="6" className="casa-vl-about-img">
-                            <div className="about-images">
-                                <div className="about-img about-img1"></div>
-                                <div className="about-img about-img2"></div>
-                                <div className="about-img about-img3"></div>
-                                <div className="about-img about-img4"></div>
-                                <div className="about-img about-img5"></div>
-                                <div className="about-img about-img6"></div>
-                            </div>
+                            {/* <Galleria /> */}
 
                         </IonCol>
                     </IonRow>
@@ -140,11 +118,12 @@ const HomeComponent = () => {
                         <h1>Vamos adotar um amiguinho?</h1>
                     </IonRow>
                     <IonRow>
-                        <IonCol size="6">
-                            <div className="adopt-img"></div>
+                        <IonCol size="12" sizeMd="6" className="photogrid">
+                            <PhotoGrid />
+                            {/* <div className="adopt-img"></div> */}
                         </IonCol>
 
-                        <IonCol size="6">
+                        <IonCol size="12" sizeMd="6">
                             <div className="adopt-forms">
                                 <h2>Formulário de adoção</h2>
                                 <iframe
@@ -168,7 +147,7 @@ const HomeComponent = () => {
                 <IonFooter className="casa-vl-footer">
                     <IonRow className="footer-top">
                         <IonCol size="6" className="footer-logo">
-                            <a href="#home">
+                            <a href="#main">
                                 <div className="footer-img"></div>
                             </a>
                         </IonCol>
@@ -185,7 +164,7 @@ const HomeComponent = () => {
                     </IonRow>
                     <IonRow>
                         <IonCol size="12" className="footer-rights">
-                            <span>Casa do Vira-Lata</span> - Todos os direitos reservados | desenvolvido por <span><a href="https://www.devside.com.br" target="_blank">devside</a></span>.
+                            <span>Casa do Vira-Lata</span> - Todos os direitos reservados | desenvolvido por <span> <a href="https://www.devside.com.br" target="_blank" rel="noopener">devside</a> </span>.
                         </IonCol>
                     </IonRow>
                 </IonFooter>

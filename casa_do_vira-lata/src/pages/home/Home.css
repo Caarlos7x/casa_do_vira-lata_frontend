@@ -19,7 +19,7 @@ html {
 .casa-vl-home {
   width: 100%;
   background-color: #00c6d8;
-  padding: 1rem 2rem;
+  /* padding: 1rem 2rem; */
   text-align: center;
 }
 
@@ -51,7 +51,7 @@ html {
 }
 
 /* Hero Section */
-#hero {
+#home {
   background: url("../../../public/images/bg.svg") center/cover no-repeat;
   padding: 5rem 5rem;
   color: white;
@@ -59,14 +59,15 @@ html {
 
 .casa-vl-hero-info {
   margin-top: 5rem;
-  h3 {
-    font-size: 3rem;
-    font-weight: bold;
-  }
+}
 
-  p {
-    font-size: 2rem;
-  }
+.casa-vl-hero-info h3 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.casa-vl-hero-info p {
+  font-size: 2rem;
 }
 
 .hero-img {
@@ -93,6 +94,12 @@ html {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+
+    a {
+      &:hover {
+        color: #333;
+      }
+    }
   }
 }
 
@@ -111,144 +118,53 @@ html {
 }
 
 .about-title {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 100px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 100px;
+}
 
-    h1 {
-        font-size: 3.5rem;
-        color: black;
-        font-weight: 700;
-        
-    }
+.about-title h1 {
+  font-size: 3.5rem;
+  color: black;
+  font-weight: 700;
 }
 
 .casa-vl-about-us {
   h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     color: black;
+    margin-top: 3.12rem;
   }
 
   p {
     text-align: justify;
+    font-size: 1.25rem;
+    margin-top: 5rem;
+    color: black;
   }
 }
 
-.casa-vl-about-us p {
-  font-size: 1.25rem;
-  margin-top: 1rem;
-  color: black;
-}
-
 .about-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 2rem;
-    margin-top: 2rem;
-    padding: 20px;
-}
-
-.about-images .about-img1,
-.about-images .about-img2,
-.about-images .about-img3,
-.about-images .about-img4,
-.about-images .about-img5,
-.about-images .about-img6 {
-    flex: 1 1 calc(33.333% - 2rem);
-    max-width: calc(33.333% - 2rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 20px;
 }
 
 .about-images .about-img {
-    background-size: cover;
-    height: 350px;
-    width: 350px;
-    border-radius: 10px;
+  background-size: cover;
+  height: 350px;
+  width: 350px;
+  border-radius: 10px;
+  opacity: 0.6;
+  transition: opacity 0.6s ease-in-out;
 }
 
-.about-images .about-img:nth-child(1) {
-    background-image: url(../../../public/images/cat-01.png);
-    background-size: cover;
-    height: 350px;
-    width: 350px;
-    border-radius: 10px;
-    opacity: 0.6;
-    transition: opacity 0.6s ease-in-out;
-
-    &:hover {
-        opacity: 1;
-    }
-}
-
-.about-images .about-img:nth-child(2) {
-    background-image: url(../../../public/images/dog-01.png);
-    background-size: cover;
-    height: 350px;
-    width: 350px;
-    border-radius: 10px;
-    opacity: 0.6;
-    transition: opacity 0.6s ease-in-out;
-
-    &:hover {
-        opacity: 1;
-    }
-}
-
-.about-images .about-img:nth-child(3) {
-    background-image: url(../../../public/images/cat-02.png);
-    background-size: cover;
-    height: 350px;
-    width: 350px;
-    border-radius: 10px;
-    opacity: 0.6;
-    transition: opacity 0.6s ease-in-out;
-
-    &:hover {
-        opacity: 1;
-    }
-}
-
-.about-images .about-img:nth-child(4) {
-    background-image: url(../../../public/images/dog-02.png);
-    background-size: cover;
-    height: 350px;
-    width: 350px;
-    border-radius: 10px;
-    opacity: 0.6;
-    transition: opacity 0.6s ease-in-out;
-
-    &:hover {
-        opacity: 1;
-    }
-}
-
-.about-images .about-img:nth-child(5) {
-    background-image: url(../../../public/images/cat-03.png);
-    background-size: cover;
-    height: 350px;
-    width: 350px;
-    border-radius: 10px;
-    opacity: 0.6;
-    transition: opacity 0.6s ease-in-out;
-
-    &:hover {
-        opacity: 1;
-    }
-}
-
-.about-images .about-img:nth-child(6) {
-    background-image: url(../../../public/images/dog-03.png);
-    background-size: cover;
-    height: 350px;
-    width: 350px;
-    border-radius: 10px;
-    opacity: 0.6;
-    transition: opacity 0.6s ease-in-out;
-
-    &:hover {
-        opacity: 1;
-    }
+.about-images .about-img:hover {
+  opacity: 1;
 }
 
 /* Adopt Section */
@@ -256,14 +172,19 @@ html {
   padding: 5rem 5rem;
 }
 
+.forms {
+  margin-left: 20px;
+}
+
 .adopt-title {
   margin: 6.25rem;
-  h1 {
-    font-size: 2.5rem;
-    color: black;
-    text-align: center;
-    margin: 0 auto;
-  }
+}
+
+.adopt-title h1 {
+  font-size: 2.5rem;
+  color: black;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .adopt-img {
@@ -279,13 +200,14 @@ html {
   padding: 1rem;
   border-radius: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin-left: 20px;
+}
 
-  h2 {
-    text-align: center;
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: black;
-  }
+.adopt-forms h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: black;
 }
 
 /* Footer */
@@ -297,7 +219,8 @@ html {
 
 .footer-top {
   display: flex;
-  justify-content: space-between;
+  margin: 0 auto;
+  margin-left: 20%;
 }
 
 .footer-logo {
@@ -317,6 +240,12 @@ html {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
+
+  a {
+    &:hover {
+      color: #333;
+    }
+  }
 }
 
 .footer-social a,
@@ -330,24 +259,181 @@ html {
   text-align: center;
   margin-top: 2.5rem;
   font-size: 1rem;
-
-  span {
-    font-weight: 700;
-  }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  #hero {
-    padding: 2rem 0;
-  }
+.footer-rights span {
+  font-weight: 700;
+}
 
-  .hero-img {
-    height: 200px;
-    width: 200px;
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .hero-img, .adopt-img {
+    height: 400px;
+    width: 400px;
   }
 
   .adopt-forms {
+    width: 30rem;
+  }
+
+  .about-title h1,
+  .adopt-title h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #home {
+    padding: 2rem 1rem;
+  }
+
+  .hero-img, .adopt-img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .casa-vl-hero-info h3 {
+    font-size: 2.5rem;
+  }
+
+  .casa-vl-hero-info p {
+    font-size: 1.5rem;
+  }
+
+  .about-images .about-img {
+    height: 250px;
+    width: 250px;
+  }
+
+  .adopt-forms {
+    width: 100%;
     padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .nav-title {
+    font-size: 1rem !important;
+  }
+
+  #home {
+    padding: 1rem;
+  }
+
+  .casa-vl-hero-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .casa-vl-hero-info {
+    order: 1;
+    text-align: center;
+
+    h3 {
+      font-size: 2.8rem !important;
+    }
+
+    p {
+      font-size: 1.2rem !important;
+      margin-top: 2rem;
+    }
+  }
+
+  .casa-vl-hero-img {
+    order: 2;
+
+  }
+
+  .hero-img {
+    height: 250px;
+    width: 250px;
+  }
+
+  .casa-vl-hero-info-panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .display-patreon a {
+    margin: 20px 0 20px 0;
+
+    &:hover {
+      color: #333;
+    }
+  }
+
+  #about {
+    padding: 1.5rem;
+  }
+  
+  .about-title h1 {
+    font-size: 5.5rem;
+  }
+  
+
+  .casa-vl-about-us {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: 2.3rem;
+      color: #333;
+      margin: 0 auto;
+    }
+  }
+
+  .casa-vl-hero-info h3 {
+    font-size: 2rem;
+  }
+
+  .casa-vl-hero-info p {
+    font-size: 1.25rem;
+  }
+
+  .about-images .about-img {
+    height: 150px;
+    width: 150px;
+  }
+
+  #adopt {
+    padding: 1.5rem;
+  }
+
+  .adopt-title {
+    margin: 0 0 3.12rem 0;
+  }
+
+  .adopt-forms h2 {
+    font-size: 2rem;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 25px;
+
+    a {
+      &:hover {
+        color: #333;
+      }
+    }
+  }
+
+  .footer-rights {
+    font-size: .8rem;
+
+    span:nth-child(2) {
+      &:hover {
+        color: #333;
+      }
+    }
   }
 }
