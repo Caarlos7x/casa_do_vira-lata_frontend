@@ -7,6 +7,7 @@ import "primeicons/primeicons.css";
 import "./Home.css";
 import PhotoGrid from "../galleria/PhotoGrid";
 import WhatsAppButton from "../../components/whatsappButton/WhatsAppButton";
+import VideoBackground from "../../components/video/VidoBackground";
 
 const HomeComponent = () => {
     const [isMounted, setIsMounted] = useState(false);
@@ -75,7 +76,7 @@ const HomeComponent = () => {
                         <h1>Quem Somos</h1>
                     </IonRow>
                     <IonRow>
-                        <IonCol size="12" sizeMd="12" className="casa-vl-about-us">
+                        <IonCol size="12" sizeMd="6" className="casa-vl-about-us">
                             <p>
                                 A <strong>Casa do Vira-Lata</strong> é uma organização dedicada a encontrar lares amorosos
                                 para cães e gatos abandonados. Com a paixão pela proteção animal
@@ -100,6 +101,10 @@ const HomeComponent = () => {
                                 Seja parte da mudança. Adote, doe, e espalhe a palavra!
                             </p>
                         </IonCol>
+
+                        <IonCol size="12" sizeMd="6" className="casa-vl-about-img">
+                            <div className="about-video"> <VideoBackground /></div>
+                        </IonCol>
                     </IonRow>
                 </section>
 
@@ -116,7 +121,7 @@ const HomeComponent = () => {
                         <IonCol size="12" sizeMd="6">
                             <div className="adopt-forms">
                                 <h2>Formulário de adoção</h2>
-                                <h3>Acompanhe nosso dia-a-dia no Instagram</h3>
+                                <h3><a href="https://www.instagram.com/casadoviralata/" target="_blank">Clique aqui</a> e acompanhe nosso dia-a-dia no Instagram</h3>
                                 <iframe
                                     className="adopt-form-content"
                                     src="https://docs.google.com/forms/d/e/1FAIpQLSeOTb99-qlbSya0KVOG2Yk091s2925yVYg5_KSwtFoTLn1WHw/viewform?embedded=true"
@@ -144,10 +149,10 @@ const HomeComponent = () => {
                         </IonCol>
 
                         <IonCol size="6" className="footer-social">
-                            <a href="https://www.instagram.com/casadoviralata/">
+                            <a href="https://www.instagram.com/casadoviralata/" target="_blank">
                                 <i className="pi pi-instagram"></i>
                             </a>
-                            <a href="https://www.tiktok.com/@casadoviralata">
+                            <a href="https://www.tiktok.com/@casadoviralata" target="_blank">
                                 <i className="pi pi-tiktok"></i>
                             </a>
                         </IonCol>

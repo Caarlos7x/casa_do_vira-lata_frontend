@@ -249,6 +249,11 @@ html {
     color: black;
     text-align: center;
     margin-top: 50px;
+
+    a {
+      color: #00c6d8;
+      text-decoration: none;
+    }
   }
 }
 
@@ -428,6 +433,7 @@ html {
   .about-title h1 {
     font-size: 5.5rem;
   }
+
 
   .casa-vl-about-us {
     display: flex;
