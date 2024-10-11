@@ -8,6 +8,7 @@ import "./Home.css";
 import PhotoGrid from "../galleria/PhotoGrid";
 import WhatsAppButton from "../../components/whatsappButton/WhatsAppButton";
 import VideoBackground from "../../components/video/VidoBackground";
+import Merchant from '../../components/caroussel/CarousselMerchant'
 
 const HomeComponent = () => {
     const [isMounted, setIsMounted] = useState(false);
@@ -106,6 +107,12 @@ const HomeComponent = () => {
                             <div className="about-video"> <VideoBackground /></div>
                         </IonCol>
                     </IonRow>
+                </section>
+
+                <section>
+                    <div className="caroussel">
+                        <Merchant />
+                    </div>
                 </section>
 
                 {/* Adopt Section */}

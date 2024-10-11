@@ -246,11 +246,11 @@ html {
   h3 {
     font-size: 1.2rem;
     font-weight: 700;
-    color: black;
+    color: #333;
     text-align: center;
     margin-top: 50px;
 
-    a {
+    a:hover {
       color: #00c6d8;
       text-decoration: none;
     }
@@ -388,14 +388,17 @@ html {
   .casa-vl-hero-info {
     order: 1;
     text-align: center;
+    margin-left: -100px;
 
     h3 {
       font-size: 2.7rem !important;
     }
 
     p {
-      font-size: 1.2rem !important;
+      font-size: 1.5rem !important;
       margin-top: 2rem;
+      margin-left: -50px;
+      width: 300px;
     }
   }
 
