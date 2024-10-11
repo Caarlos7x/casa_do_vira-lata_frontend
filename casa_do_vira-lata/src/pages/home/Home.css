@@ -1,4 +1,3 @@
-
 body,
 html {
   height: 100%;
@@ -6,6 +5,32 @@ html {
   padding: 0;
   font-family: "Monserrat", sans-serif;
   background-color: #f6f7f8;
+  scroll-behavior: smooth;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+  animation: jump 3s infinite;
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.whatsapp-button img {
+  width: 100%;
+  height: 100%;
 }
 
 /* Main */
@@ -85,7 +110,6 @@ html {
 .casa-vl-hero-img {
   padding-right: 100px;
 }
-
 
 /* Info Card */
 .casa-vl-hero-info-panel {
@@ -211,13 +235,24 @@ html {
   border-radius: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   margin-left: 20px;
+
+  h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: black;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+  }
 }
 
 .adopt-forms h2 {
-  text-align: center;
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: black;
 }
 
 /* Footer */
@@ -283,7 +318,8 @@ html {
 
 /* Responsive Adjustments */
 @media (max-width: 1200px) {
-  .hero-img, .adopt-img {
+  .hero-img,
+  .adopt-img {
     height: 400px;
     width: 400px;
   }
@@ -303,7 +339,8 @@ html {
     padding: 2rem 1rem;
   }
 
-  .hero-img, .adopt-img {
+  .hero-img,
+  .adopt-img {
     height: 300px;
     width: 300px;
   }
@@ -328,7 +365,6 @@ html {
 }
 
 @media (max-width: 480px) {
-
   .nav-title {
     font-size: 1rem !important;
   }
@@ -360,7 +396,6 @@ html {
 
   .casa-vl-hero-img {
     order: 2;
-
   }
 
   .hero-img {
@@ -371,12 +406,12 @@ html {
   .casa-vl-hero-info-panel {
     display: flex;
     flex-direction: column;
-    width: 100%; 
+    width: 100%;
     height: auto;
     justify-content: center;
     align-items: center;
   }
-  
+
   .display-patreon a {
     margin: 20px 0 20px 0;
     text-align: center;
@@ -389,11 +424,10 @@ html {
   #about {
     padding: 1.5rem;
   }
-  
+
   .about-title h1 {
     font-size: 5.5rem;
   }
-  
 
   .casa-vl-about-us {
     display: flex;
@@ -448,14 +482,20 @@ html {
 
   .photogrid::before {
     left: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1), 
-    rgba(255, 255, 255, 0));
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
   }
 
   .photogrid::after {
     right: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 1), 
-    rgba(255, 255, 255, 0));
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
   }
 
   .footer-social {
@@ -472,7 +512,7 @@ html {
   }
 
   .footer-rights {
-    font-size: .8rem;
+    font-size: 0.8rem;
 
     span:nth-child(2) {
       &:hover {

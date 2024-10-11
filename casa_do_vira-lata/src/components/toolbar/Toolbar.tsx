@@ -34,7 +34,7 @@ function Navbar() {
         <div className="nav-links">
           <a href="#about">Quem Somos</a>
           <a href="#adopt">Adote</a>
-          <a href="#contact">Contato</a>
+          <a href="https://wa.me/5511999999999" target='_blank'>Contato</a>
         </div>
       </div>
     </>

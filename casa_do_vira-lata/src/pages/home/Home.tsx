@@ -1,12 +1,12 @@
 "use client";
 
 import { IonRow, IonCol, IonFooter } from "@ionic/react";
-import Navbar from '../../components/toolbar/Toolbar'
+import Navbar from '../../components/toolbar/Toolbar';
 import { useState, useEffect } from "react";
 import "primeicons/primeicons.css";
 import "./Home.css";
 import PhotoGrid from "../galleria/PhotoGrid";
-// import Galleria from "../../components/galleria/Galleria";
+import WhatsAppButton from "../../components/whatsappButton/WhatsAppButton";
 
 const HomeComponent = () => {
     const [isMounted, setIsMounted] = useState(false);
@@ -22,11 +22,12 @@ const HomeComponent = () => {
     return (
         <div>
             <main id="main">
+                {/* Botão do WhatsApp */}
+                <WhatsAppButton />
+
                 {/* Navbar */}
                 <section id="navbar" className="casa-vl-home">
-                    <Navbar>
-
-                    </Navbar>
+                    <Navbar />
                 </section>
 
                 {/* Hero Section */}
@@ -64,7 +65,6 @@ const HomeComponent = () => {
                                     <span>Assinatura <strong>PICPAY</strong> R$ 12,00 por ano</span>
                                 </a>
                             </IonCol>
-
                         </IonRow>
                     </IonRow>
                 </section>
@@ -100,9 +100,6 @@ const HomeComponent = () => {
                                 Seja parte da mudança. Adote, doe, e espalhe a palavra!
                             </p>
                         </IonCol>
-
-                        {/* <IonCol size="6" className="casa-vl-about-img">
-                        </IonCol> */}
                     </IonRow>
                 </section>
 
@@ -114,12 +111,12 @@ const HomeComponent = () => {
                     <IonRow>
                         <IonCol size="12" sizeMd="6" className="photogrid">
                             <PhotoGrid />
-                            {/* <div className="adopt-img"></div> */}
                         </IonCol>
 
                         <IonCol size="12" sizeMd="6">
                             <div className="adopt-forms">
                                 <h2>Formulário de adoção</h2>
+                                <h3>Acompanhe nosso dia-a-dia no Instagram</h3>
                                 <iframe
                                     className="adopt-form-content"
                                     src="https://docs.google.com/forms/d/e/1FAIpQLSeOTb99-qlbSya0KVOG2Yk091s2925yVYg5_KSwtFoTLn1WHw/viewform?embedded=true"
@@ -154,7 +151,6 @@ const HomeComponent = () => {
                                 <i className="pi pi-tiktok"></i>
                             </a>
                         </IonCol>
-
                     </IonRow>
                     <IonRow>
                         <IonCol size="12" className="footer-rights">
