@@ -128,7 +128,7 @@ const HomeComponent = () => {
                         <IonCol size="12" sizeMd="6">
                             <div className="adopt-forms">
                                 <h2>Formulário de adoção</h2>
-                                <h3><a href="https://www.instagram.com/casadoviralata/" target="_blank">Clique aqui</a> e acompanhe nosso dia-a-dia no Instagram</h3>
+                                <h3><a href="https://www.instagram.com/casadoviralata/" target="_blank" rel="noopener">Clique aqui</a> e acompanhe nosso dia-a-dia no Instagram</h3>
                                 <iframe
                                     className="adopt-form-content"
                                     src="https://docs.google.com/forms/d/e/1FAIpQLSeOTb99-qlbSya0KVOG2Yk091s2925yVYg5_KSwtFoTLn1WHw/viewform?embedded=true"
@@ -156,10 +156,10 @@ const HomeComponent = () => {
                         </IonCol>
 
                         <IonCol size="6" className="footer-social">
-                            <a href="https://www.instagram.com/casadoviralata/" target="_blank">
+                            <a href="https://www.instagram.com/casadoviralata/" target="_blank" rel="noopener">
                                 <i className="pi pi-instagram"></i>
                             </a>
-                            <a href="https://www.tiktok.com/@casadoviralata" target="_blank">
+                            <a href="https://www.tiktok.com/@casadoviralata" target="_blank" rel="noopener">
                                 <i className="pi pi-tiktok"></i>
                             </a>
                         </IonCol>
